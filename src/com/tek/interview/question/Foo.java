@@ -151,7 +151,7 @@ class calculator {
 			double total = 0;
 
 			// Iterate through the items in the order
-			for (int i = 0; i <= r.size(); i++) {
+			for (int i = 0; i < r.size(); i++) {
 
 				// Calculate the taxes
 				double tax = 0;
