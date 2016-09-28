@@ -199,14 +199,14 @@ public class Foo {
 
 		double grandTotal = 0;
 
-		c.add(new OrderLine(new Item("book", (float) 12.49), 1));
-		c.add(new OrderLine(new Item("music CD", (float) 14.99), 1));
-		c.add(new OrderLine(new Item("chocolate bar", (float) 0.85), 1));
+		c.add(new OrderLine(new Item("book",  12.49f), 1));
+		c.add(new OrderLine(new Item("music CD",  14.99f), 1));
+		c.add(new OrderLine(new Item("chocolate bar",  0.85f), 1));
 
 		o.put("Order 1", c);
 
 		// Reuse cart for an other order
-		c.clear();
+		/*c.clear();
 
 		c.add(new OrderLine(new Item("imported box of chocolate", 10), 1));
 		c.add(new OrderLine(new Item("imported bottle of perfume", (float) 47.50), 1));
@@ -221,7 +221,21 @@ public class Foo {
 		c.add(new OrderLine(new Item("packet of headache pills", (float) 9.75), 1));
 		c.add(new OrderLine(new Item("box of importd chocolates", (float) 11.25), 1));
 
-		o.put("Order 3", c);
+		o.put("Order 3", c);*/
+		
+		Order c1 = new Order();
+		c1.add(new OrderLine(new Item("imported box of chocolate", 10), 1));
+		c1.add(new OrderLine(new Item("imported bottle of perfume", 47.50f), 1));
+
+		o.put("Order 2", c1);
+		
+		Order c2 = new Order();
+		c2.add(new OrderLine(new Item("Imported bottle of perfume", 27.99f), 1));
+		c2.add(new OrderLine(new Item("bottle of perfume", 18.99f), 1));
+		c2.add(new OrderLine(new Item("packet of headache pills", 9.75f), 1));
+		c2.add(new OrderLine(new Item("box of imported chocolates", 11.25f), 1));
+
+		o.put("Order 3", c2);
 
 		new calculator().calculate(o);
 
