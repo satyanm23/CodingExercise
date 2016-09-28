@@ -124,7 +124,8 @@ class Order {
 class calculator {
 
 	public static double rounding(double value) {
-		return ( (int) (value * 100)) / 100;
+		//return ( (int) (value * 100)) / 100;
+		return  (double)Math.ceil(value*100)/100;
 	}
 
 	/**
