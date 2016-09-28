@@ -70,7 +70,7 @@ public class FooTest {
 	@Test(expected = Exception.class) 
 	public void testOrderLineWithZeroQuantity() throws Exception {
 		
-		new OrderLine(new Item("imported box of chocolate", 10), -1);
+		new OrderLine(new Item("imported box of chocolate", 10), 0);
 	}
 	@Test 
 	public void testOrderLineWithFirstItem() throws Exception  {
