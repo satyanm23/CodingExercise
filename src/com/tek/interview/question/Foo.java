@@ -177,7 +177,7 @@ class calculator {
 			// Print out the total taxes
 			System.out.println("Sales Tax: " + Math.floor(totalTax));
 
-			total = total + totalTax;
+			//total = total + totalTax;
 
 			// Print out the total amount
 			System.out.println("Total: " + Math.floor(total * 100) / 100);
