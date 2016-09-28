@@ -156,7 +156,7 @@ class calculator {
 				// Calculate the taxes
 				double tax = 0;
 
-				if (r.get(i).getItem().getDescription().contains("imported")) {
+				if (r.get(i).getItem().getDescription().toLowerCase().contains("imported")) {
 					tax = rounding(r.get(i).getItem().getPrice() * 0.15); // Extra 5% tax on
 					// imported items
 				} else {
