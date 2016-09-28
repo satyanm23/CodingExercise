@@ -139,10 +139,14 @@ class calculator {
 	public void calculate(Map<String, Order> o) {
 
 		double grandtotal = 0;
-
+		
+		//Included to reflect exact output
+		System.out.println("<pre>\n\n");
 		// Iterate through the orders
+		
 		for (Map.Entry<String, Order> entry : o.entrySet()) {
 			System.out.println("*******" + entry.getKey() + "*******");
+			//Grand toatl should not set to zero after each iteration
 			//grandtotal = 0;
 
 			Order r = entry.getValue();
@@ -151,6 +155,7 @@ class calculator {
 			double total = 0;
 
 			// Iterate through the items in the order
+			//Index should not greater than size of the list
 			for (int i = 0; i < r.size(); i++) {
 
 				// Calculate the taxes
@@ -171,20 +176,24 @@ class calculator {
 
 				// Keep a running total
 				totalTax += tax;
+				//Quantity should be included
 				total += r.get(i).getItem().getPrice()* r.get(i).getQuantity();
 			}
 
 			// Print out the total taxes
 			System.out.println("Sales Tax: " + rounding(totalTax));
-
+			
+			//No need to add total tax and sum up total again
 			//total = total + totalTax;
 
 			// Print out the total amount
 			System.out.println("Total: " + rounding(total));
 			grandtotal += total;
 		}
-
+		//Included to reflect exact output
 		System.out.println("Sum of orders: " +rounding(grandtotal));
+		
+		System.out.println("\n\n</pre>");
 	}
 }
 
