@@ -205,8 +205,8 @@ public class Foo {
 		Map<String, Order> o = new TreeMap<String, Order>();
 		
 		Order c = new Order();
-
-		double grandTotal = 0;
+		//Unused variable	
+		//double grandTotal = 0;
 
 		c.add(new OrderLine(new Item("book",  12.49f), 1));
 		c.add(new OrderLine(new Item("music CD",  14.99f), 1));
