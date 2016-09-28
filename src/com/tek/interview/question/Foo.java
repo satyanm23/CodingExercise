@@ -5,6 +5,7 @@ import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 /* ****************************************************************************************
  
@@ -190,8 +191,9 @@ public class Foo {
 
 	public static void main(String[] args) throws Exception {
 
-		Map<String, Order> o = new HashMap<String, Order>();
-
+		//Map<String, Order> o = new HashMap<String, Order>();
+		Map<String, Order> o = new TreeMap<String, Order>();
+		
 		Order c = new Order();
 
 		double grandTotal = 0;
